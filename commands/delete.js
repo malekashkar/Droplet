@@ -1,6 +1,10 @@
-exports.run = async(client, message, args) => {
-    if(message.channel.parentID !== client.config.ticket_parent) return;
+module.exports = {
+  name: "Delete",
+  usage: "delete",
+  description: "Completely delete a ticket channel.",
 
-    client.remove('opened');
-    message.channel.delete();
-}
+  execute: async (client, message, args) => {
+    if (message.channel.parentID === client.config.ticketParent)
+      message.channel.delete();
+  },
+};
