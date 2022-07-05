@@ -1,1 +1,9 @@
-node_modules
+# Folders
+node_modules/
+dist/
+assets/
+
+# Files
+.env
+config.ts
+yarn.lock
